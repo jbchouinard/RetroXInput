@@ -32,7 +32,7 @@ Point_NormalizePoint(p, norm) {
 	return Point_MakePoint(p.x / norm, p.y / norm)
 }
 
-; Map a point from a radius 1 circle to a [-1, 1] square
+; Map a point from a radius 1 circle to a [-1, 1] grid
 ; https://stackoverflow.com/a/32391780
 ; x = ½ √( 2 + u² - v² + 2u√2 ) - ½ √( 2 + u² - v² - 2u√2 )
 ; y = ½ √( 2 - u² + v² + 2v√2 ) - ½ √( 2 - u² + v² - 2v√2 )
