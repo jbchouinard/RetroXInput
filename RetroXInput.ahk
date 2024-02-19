@@ -140,7 +140,9 @@ ReadButtonsConfig() {
 	for name, key in KeyNameMap {
 		IniRead keyConf, %configFile% , Buttons, %name%
 		if (keyConf != "ERROR") {
-			keyConfigs[key] := keyConf
+			if (keyConf != "NONE") {
+				keyConfigs[key] := keyConf
+		  	}
 		}
 	}
 	for key, keyConf in keyConfigs {
